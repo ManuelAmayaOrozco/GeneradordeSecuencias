@@ -14,7 +14,7 @@ class GeneradorSecuencias {
         mostrarSec()
     }
 
-    fun getSec() {
+    private fun getSec() {
         var frase = ""
         for (palabra in sec) {
             frase += "$palabra "
@@ -22,7 +22,7 @@ class GeneradorSecuencias {
         }
     }
 
-    fun mostrarSec() {
+    private fun mostrarSec() {
         var frase = ""
         for (palabra in sec) {
             frase += "$palabra "
