@@ -1,4 +1,4 @@
-class GeneradorSecuencias() {
+class GeneradorSecuencias {
 
     private lateinit var sec: Sequence<String>
 
@@ -8,11 +8,24 @@ class GeneradorSecuencias() {
         var count = num
         while (count > 0) {
             sec = lineSequence()
+            println(sec)
             count--
         }
     }
 
+    fun fraseFinal(num: Int) {
+        var count = num
+        while (count > 0) {
+            sec = lineSequence()
+            count--
+        }
+    }
 
+    fun getSec() {
+        for (palabra in sec) {
+            println("$palabra ")
+        }
+    }
 
     fun mostrarSec(): Sequence<String> {
         return sec
