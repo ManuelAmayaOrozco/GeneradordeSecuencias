@@ -5,29 +5,28 @@ class GeneradorSecuencias {
     private fun lineSequence(limit: Int = Int.MAX_VALUE) = generateSequence { readLine() }.constrainOnce().take(limit)
 
     fun fraseIncremental(num: Int) {
-        var count = num
-        while (count > 0) {
-            sec = lineSequence()
-            println(sec)
-            count--
-        }
+        sec = lineSequence(num)
+        getSec()
     }
 
     fun fraseFinal(num: Int) {
-        var count = num
-        while (count > 0) {
-            sec = lineSequence()
-            count--
-        }
+        sec = lineSequence(num)
+        mostrarSec()
     }
 
     fun getSec() {
+        var frase = ""
         for (palabra in sec) {
-            println("$palabra ")
+            frase += "$palabra "
+            println(frase)
         }
     }
 
-    fun mostrarSec(): Sequence<String> {
-        return sec
+    fun mostrarSec() {
+        var frase = ""
+        for (palabra in sec) {
+            frase += "$palabra "
+        }
+        println(frase)
     }
 }
