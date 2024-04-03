@@ -1,11 +1,13 @@
 class Consola: IEntradaSalida {
 
-    fun proceso() {
-        val num1 = obtenerInt("Introduce el número de palabras que quieres introducir (Incremental): ")
-        GeneradorSecuencias().fraseIncremental(num1)
+    fun procesoFrasInc() {
+        val num = obtenerInt("Introduce el número de palabras que quieres introducir (Incremental): ")
+        GeneradorSecuencias().fraseIncremental(num)
+    }
 
-        val num2 = obtenerInt("Introduce el número de palabras que quieres introducir (Final): ")
-        GeneradorSecuencias().fraseFinal(num2)
+    fun procesoFrasFin() {
+        val num = obtenerInt("Introduce el número de palabras que quieres introducir (Final): ")
+        GeneradorSecuencias().fraseFinal(num)
     }
 
     override fun mostrar(message: String, saltoLinea: Boolean) {

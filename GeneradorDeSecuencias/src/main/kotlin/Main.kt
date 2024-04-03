@@ -1,3 +1,3 @@
 fun main(args: Array<String>) {
-    Consola().proceso()
+    Menu().mostrarMenu()
 }
